@@ -1,0 +1,26 @@
+﻿@model Lab_25_ValidateUserInformation.Models.Validator
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Welcome To Sign-Up Sheet</title>
+  
+</head>
+<body>
+    <h2>Welcome To Sign-Up Sheet</h2>
+    <div>
+        @using (Html.BeginForm())
+        {
+           @Html.ValidationSummary()
+            <p> Name:@Html.TextBoxFor(x => x.Name)</p>
+            <p> Age:@Html.TextBoxFor(x => x.Age)</p>
+            <input type="submit" value="Submit Registration" />
+        } 
+    </div>
+</body>
+</html>

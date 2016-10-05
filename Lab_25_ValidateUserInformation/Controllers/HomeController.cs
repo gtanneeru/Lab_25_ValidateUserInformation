@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab_25_ValidateUserInformation.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,23 +9,19 @@ namespace Lab_25_ValidateUserInformation.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public string Index()
         {
+            return "Welcome To Sign-Up Sheet";
+        }
+        [HttpGet]
+        public ActionResult dataInput()
+        {
+            if (ModelState.IsValid)
+            {
+                
+            }
             return View();
         }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
+      
     }
 }
